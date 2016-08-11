@@ -1,0 +1,132 @@
+/* ISOTOPE */
+/* ===================================== */
+
+.portfolio-item {
+	z-index: 2;
+	transform:translate3d(0,0,0);
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+}
+
+.isotope-hidden.portfolio-item {
+	pointer-events: none;
+	z-index: 1;
+	transform:translate3d(0,0,0);
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+}
+
+.isotope,
+.isotope .portfolio-item, .isotope .portfolio-item, .isotope .post-item {
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+	-ms-transition-duration: 0.8s;
+	-o-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+}
+
+.isotope {
+	-webkit-transition-property: height, width;
+	-moz-transition-property: height, width;
+	-ms-transition-property: height, width;
+	-o-transition-property: height, width;
+	transition-property: height, width;
+}
+
+.isotope .portfolio-item, .isotope .post-item {
+	-webkit-transition-property: -webkit-transform, opacity;
+	-moz-transition-property:    -moz-transform, opacity;
+	-ms-transition-property:     -ms-transform, opacity;
+	-o-transition-property:      -o-transform, opacity;
+	transition-property:         transform, opacity;
+}
+
+.isotope.no-transition,
+.isotope.no-transition .portfolio-item,
+.isotope .portfolio-item.no-transition,
+.isotope.no-transition .post-item,
+.isotope .post-item.no-transition {
+	-webkit-transition-duration: 0s;
+	-moz-transition-duration: 0s;
+	-ms-transition-duration: 0s;
+	-o-transition-duration: 0s;
+	transition-duration: 0s;
+}
+
+.isotope.infinite-scrolling {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+
+#infscr-loading {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	text-align: center;
+	padding: 10px;
+	box-sizing: border-box;
+	margin-left: -82px;
+	font-size: 13px;
+	color: #fff;
+	border-radius: 3px;
+		img {
+			display: none;
+		}
+}
+
+/* - Filters - */
+
+.data-filter-categories {
+	list-style-type: none;
+	display: inline-block;
+	visibility: visible;
+	text-transform: uppercase;
+	margin-right: 10px;
+}
+
+.data-filter-categories li a{
+	cursor: pointer;
+	opacity: 1;
+	color:$text-dark;
+		&:hover {
+			opacity: 1;
+		}
+}
+
+.filter-visible {
+	visibility: visible;
+	@include transition-delay(.2s);
+}
+
+.data-filter-categories li {
+	display: inline-block;
+	margin: 10px 5px 0px 5px;
+}
+
+.data-filter-categories li a span { 
+	margin-top:3px; 
+	margin-right:8px;
+	border-radius:50%;
+	width:14px; 
+	height:14px; 
+	float:left; 
+	border:1px solid #ccc; 
+}
+
+.data-filter-categories li a.active span {
+	position: relative;
+}
+
+.data-filter-categories li a.active span:after { 
+	content:''; 
+	background:$color-primary; 
+	position:absolute; 
+	width:8px; 
+	height:8px; 
+	border-radius:50%;
+	left:2px; 
+	top:2px;
+}

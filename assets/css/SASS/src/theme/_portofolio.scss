@@ -1,0 +1,88 @@
+/* PORTFOLIO HOVER EFFECT */
+/* ===================================== */
+
+.portfolio-item .portfolio-item-overlay {
+	opacity: 0;
+	background-color: $color-light;
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	bottom: 12px;
+	right: 12px;
+	@include transition (.2s);
+}
+
+.portfolio-item:hover .portfolio-item-overlay {
+	opacity: 1;
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+	right: 10px;
+}
+
+.portfolio-item:hover img {
+	opacity: .8;
+}
+
+.portfolio-spaced-item  .portfolio-item-overlay {
+	opacity: 0;
+	background-color: $color-light;
+	position: absolute;
+	top: 22px;
+	left: 22px;
+	bottom: 22px;
+	right: 22px;
+	@include transition (.2s);
+}
+
+.portfolio-spaced-item:hover .portfolio-item-overlay {
+	opacity: 1;
+	top: 20px;
+	left: 20px;
+	bottom: 20px;
+	right: 20px;
+}
+
+.portfolio-spaced > .portfolio-spaced-item{
+	padding: 10px
+}
+
+/* - Overlay setup - */
+
+.portfolio-item-overlay span.portfolio-item-overlay-title {
+	position: relative;
+	margin-bottom: 24px;
+	color:$text-dark;
+	font-family: "Raleway", sans-serif;
+	text-transform: uppercase;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.portfolio-item-overlay span.portfolio-item-overlay-subtitle {
+	position: relative;
+	color:$text-dark;
+	visibility: visible;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 16px
+}
+
+.portfolio-item-overlay:hover span.portfolio-item-overlay-subtitle {
+	animation:fadeInUp .2s;
+	-webkit-animation: fadeInUp .2s;
+}
+
+@media (max-width:700px) {
+	.portfolio-item-overlay span.portfolio-item-overlay-subtitle {
+		visibility: hidden
+	}
+}
+
+.portfolio-overlay-inner {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}

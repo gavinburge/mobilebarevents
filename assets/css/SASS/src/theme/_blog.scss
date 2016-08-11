@@ -1,0 +1,149 @@
+/* BLOG */
+/* ===================================== */
+
+.blog-post {
+	padding-bottom: 0px;
+	position: relative !Important;
+	display: block
+}
+
+.blog-post-image {
+	position: relative !Important;
+}
+
+.blog-post-info {
+	position: relative !Important;
+}
+
+.blog-navigation a object{
+	cursor: pointer;
+}
+
+.blog-list {
+	list-style: none;
+}
+
+.blog-list li {
+	color:$text-dark;
+}
+
+.blog-list li:before {
+	content:'\00B7';
+	color:$color-primary;
+	font-size: 16px;
+	margin-right: 5px
+}
+
+.blog-post-author i {
+	margin-right: 5px;
+	font-size: 14px;
+}
+
+.blog-post-author a {
+	margin-right: 10px;
+}
+
+.blog-post-info p {
+	margin-top: 20px !important
+}
+
+/* - Blog post overlay - */
+
+.blog-post-image .blog-post-overlay {
+	opacity: 0;
+	background-color: $color-light;
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	bottom: 12px;
+	right: 12px;
+	z-index: 1;
+	@include transition (.2s);
+	text-align: center;
+}
+
+.blog-post-image:hover .blog-post-overlay {
+	opacity: 1;
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+	right: 10px;
+}
+
+.portfolio-item:hover img {
+	opacity: .8;
+}
+
+/* - Overlay setup - */
+
+.blog-post-overlay span.blog-post-overlay-title {
+	position: relative;
+	margin-bottom: 24px;
+	color:$text-dark;
+	font-size: 24px;
+	font-family: "Raleway", sans-serif;
+	text-transform: uppercase;
+	font-weight: 800;
+	display: block;
+}
+
+.blog-post-overlay  span.blog-post-overlay-subtitle {
+	position: relative;
+	color:$text-color-semi;
+	visibility: visible;
+	display: block;
+	font-size: 16px
+}
+
+.blog-post-overlay:hover span.blog-post-overlay-subtitle {
+	animation:fadeInUp .2s;
+	-webkit-animation: fadeInUp .2s;
+}
+
+@media (max-width:700px) {
+	.blog-post-overlay span.blog-post-overlay-subtitle {
+		visibility: hidden
+	}
+
+	.blog-post-overlay {
+		visibility: hidden
+	}
+}
+
+.blog-post-overlay-inner {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+/* - Blog tags - */
+
+ul.blog-post-tags {
+	list-style: none;
+	padding-left: 0 !Important;	
+}
+
+ul.blog-post-tags i{
+	margin-right: 5px
+}
+
+ul.blog-post-tags li {
+	display: inline-block;
+	color:$text-color;
+}
+
+/* - Blog social share - */
+
+ul.blog-post-social-share {
+	list-style: none;
+	padding-left: 0 !Important;	
+}
+
+ul.blog-post-social-share li {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+ul.blog-post-social-share li i {
+	font-size: 16px
+}

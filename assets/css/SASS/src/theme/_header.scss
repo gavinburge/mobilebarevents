@@ -1,0 +1,320 @@
+/* HEADER */
+/* ===================================== */
+/* General styles for all menus */
+.cbp-spmenu {
+	position: fixed;
+	padding: 0;
+	margin: 0 !important;
+	overflow-x: hidden;
+	overflow-y: visible;
+	display: block;
+	visibility: visible;
+	background:/*  url(../images/menu-bg.jpg) center center no-repeat */ $sidebar-background;
+	background-size:cover;
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+.cbp-spmenu .logo { 
+	margin-top: 45px
+}
+
+@media (max-width:769px) {
+	.logo {
+		margin-left: 20px;
+	}
+}
+
+.navbar-fixed-top .cbp-spmenu {
+	bottom: 0;
+}
+
+.navbar-default {
+	width: 100%;
+	position: relative;
+	padding: 70px 10px;
+}
+
+/* .navbar-default .logo{
+	margin-left: 20px
+} */
+
+.toggle-menu {
+	margin-top: 18px;
+	position: relative;
+}
+
+/* - Navigation Menu Hamburger icon */
+
+.nav-icon {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0px;
+	z-index: 99;
+}
+
+.nav-icon span {
+	height: 0px;
+	border: 1.5px solid #fff;
+	background-color: #fff;
+	width: 22px;
+	display: block;
+	position: absolute;
+}
+
+.nav-icon span:nth-child(1) {
+ 	top: 0px;
+}
+
+.nav-icon span:nth-child(2) {
+ 	top: 8px;
+}
+
+.nav-icon span:nth-child(3) {
+ 	top: 16px;
+}
+
+.nav-icon span:nth-child(3):before {
+	opacity: 0;
+	animation: ball 1.5s linear infinite;
+	content: '';
+	border: 2px solid #fff;
+	display: block;
+	position: relative;
+	top: 0.25px;
+}
+
+.nav-top {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 999
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+	width: 400px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.cbp-spmenu-horizontal {
+	width: 400px;
+	height: 150px;
+	left: 0;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+@media (max-width:409px) {
+	.cbp-spmenu-vertical {
+		width: 250px;
+		height: 100%;
+		top: 0;
+		z-index: 1000;
+	}
+
+	.cbp-spmenu-horizontal {
+		width: 250px;
+		height: 150px;
+		left: 0;
+		z-index: 1000;
+		overflow: hidden;
+	}
+	.cbp-spmenu-left {
+		left: -250px;
+	}
+
+	.cbp-spmenu-right {
+		right: -250px;
+	}
+}
+
+.cbp-spmenu-horizontal h3 {
+	height: 600px;
+	width: 20%;
+	float: left;
+}
+
+.cbp-spmenu-horizontal a {
+	float: left;
+	width: 20%;
+	padding: 0.8em;
+	border-left: 1px solid #258ecd;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-left {
+	left: -400px;
+}
+
+.cbp-spmenu-right {
+	right: -400px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open,  .cbp-spmenu-push-toright .navbar-fixed-top .cbp-spmenu-left.cbp-spmenu-open {
+	left: 0px;
+}
+
+.cbp-spmenu-right.cbp-spmenu-open,  .cbp-spmenu-push-toleft .navbar-fixed-top .cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+}
+
+/* Horizontal menu that slides from the top or bottom */
+.cbp-spmenu-top {
+	top: -150px;
+}
+
+.cbp-spmenu-bottom {
+	bottom: -150px;
+}
+
+.cbp-spmenu-top.cbp-spmenu-open {
+	top: 0px;
+}
+
+.cbp-spmenu-bottom.cbp-spmenu-open {
+	bottom: 0px;
+}
+
+/* Push classes applied to the body */
+.cbp-spmenu-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+.cbp-spmenu-push-toright,  .cbp-spmenu-push-toright .navbar-fixed-top {
+	left: 400px;
+}
+
+.cbp-spmenu-push-toleft,  .cbp-spmenu-push-toleft .navbar-fixed-top {
+	left: -400px;
+}
+
+/* Transitions */
+.cbp-spmenu,  .cbp-spmenu-push,  .navbar {
+-webkit-transition: all 500ms cubic-bezier(0.250, 0.250, 0.155, 0.845); 
+-moz-transition: all 500ms cubic-bezier(0.250, 0.250, 0.155, 0.845); 
+-o-transition: all 500ms cubic-bezier(0.250, 0.250, 0.155, 0.845); 
+transition: all 500ms cubic-bezier(0.250, 0.250, 0.155, 0.845); /* custom */
+-webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.155, 0.845); 
+-moz-transition-timing-function: cubic-bezier(0.250, 0.250, 0.155, 0.845); 
+-o-transition-timing-function: cubic-bezier(0.250, 0.250, 0.155, 0.845); 
+transition-timing-function: cubic-bezier(0.250, 0.250, 0.155, 0.845); /* custom */
+
+}
+
+/* content style */
+.cbp-spmenu ul {
+	margin: 60px 0;
+	padding: 0;
+	list-style: none;
+	width: 400px;
+	position: relative;
+	z-index: 99999;
+}
+
+.cbp-spmenu ul li {
+	width: 100%;
+}
+
+.cbp-spmenu ul li > a {
+	display: inline-block;
+	padding: 8px 0;
+	outline: none;
+	color: $text-dark;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 5px;
+	text-indent: 7px;
+	text-decoration: none;
+}
+
+.cbp-spmenu ul li > a:hover {
+	text-decoration: none;
+	background: none;
+	color:$color-primary;
+}
+
+.cbp-spmenu ul li > a:focus {
+	text-decoration: none;
+	background: none;
+	color:$color-primary;
+}
+
+.cbp-spmenu ul li ul {
+	width: 400px;
+	background: none;
+	margin: 0;
+	padding: 0px 0px 0px 15px;
+}
+
+.cbp-spmenu ul li ul li {
+	background: none;
+}
+
+.cbp-spmenu ul li ul li a{ 
+	font-size:13px; 
+	letter-spacing:3px; 
+	padding:5px 0;
+} 
+
+.cbp-spmenu ul li ul li a:before{ 
+	content:'-';
+	margin-right: 5px;
+
+} 
+
+.cbp-spmenu .dropdown-menu {
+	border:none; 
+	box-shadow:none;
+}
+
+.cbp-spmenu .copyright {
+	width:100%; 
+	float:left;
+	position:absolute;
+	bottom:0;
+	text-align:left;
+	font-size: 10px;
+	text-transform: uppercase
+}
+
+.cbp-spmenu-push-toright:after {
+	content: '';
+	width: 600px;
+	height: 600px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.3);
+	z-index: 20;
+}
+
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px) {
+	.cbp-spmenu ul { 
+		width:100%;
+	}
+
+	.cbp-spmenu-vertical {
+		width: 320px;
+	}
+
+	.cbp-spmenu-left {
+		left: -320px;
+	}
+
+	.cbp-spmenu-right {
+		right: -320px;
+	}
+
+	.cbp-spmenu-push-toleft, .cbp-spmenu-push-toleft .navbar-fixed-top { 
+		left:-320px;
+	}
+}
+

@@ -1,0 +1,45 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Values
+// --------------------------------------------------
+$font-size-base: 16px !default;
+$border-radius-base:        0px !default;
+$border-radius-large:       0px !default;
+$border-radius-small:       0px !default;
+$line-height-base:   1.5 !default;
+
+// Colors
+// --------------------------------------------------
+$color-dark:#EEEEEE;
+$color-light: #f3f3f3;
+$color-primary: #37dd7a;
+$sidebar-background: #f8f8f8;
+$background-map-label: rgba(23,23,32,.7);
+$loader: rgba(23,23,32,1);
+$loader-bar: #e74c3c;
+$loader-background: rgba(255,255,255,.1);
+$pricing-table-background: rgba(255,255,255,.4);
+
+// Typography
+// --------------------------------------------------
+$text-color: #fff;
+$text-dark: #333333;
+$text-color-semi: #756f6f;
+$text-color-primary: #37dd7a;
+
+// Header
+// -------------------------
+$navbar-height: 150px;
+$navbar-scrolled: 70px;
+$logo-height: 42px;
+$logo-width: 42px;
+$element-height: 24px;
+$dropdown-width: 200px;
+
+// Button Primary 
+// ---------------------------------------------------
+$primary-button-background: $color-primary;
+$primary-button-text: $text-color;
