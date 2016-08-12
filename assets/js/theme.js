@@ -71,7 +71,7 @@ jQuery(document).ready(function( $ ) {
         setTimeout(function() {
           onScrollInit( $('.os-animation') );
           onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );
-        }, 500);
+        }, 2500);
     });
     
     // Portfolio Isotope
