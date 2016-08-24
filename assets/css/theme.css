@@ -750,7 +750,12 @@ hr.copyright-hr {
 /* ===================================== */
 /* - Logo - */
 .logo {
-  width: 50px;
+  width: 250px;
+  height: auto;
+  z-index: 99; }
+
+.logo-menu {
+  width: 150px;
   height: auto;
   z-index: 99; }
 
@@ -790,6 +795,18 @@ body {
     background-color: #EEEEEE; }
   .section.section-light {
     background-color: #f3f3f3; }
+  
+  .section.classes-main-wrap{
+    background-color: #e6e6e6;
+    margin:20px;
+    margin-bottom:40px;
+  }
+
+  .section.classes-main-wrap-even{
+    background-color: #cccccc;
+    margin:20px;
+    margin-bottom:40px;
+  }
 
 section {
   z-index: 10;
@@ -990,12 +1007,13 @@ cite img {
   .event-info > * {
     margin-left: 0px; } }
 .event-single-poster-image {
-  height: 420px; }
+  height: 420px;
+  padding:30px;}
 
 /* - Pricing - */
 .price-table-wrap {
   background-color: rgba(255, 255, 255, 0.4);
-  min-height: 200px;
+  min-height: 450px;
   height: auto;
   width: 100%;
   padding: 30px; }
@@ -1082,7 +1100,7 @@ cite img {
   cursor: default; }
 
 .single-item-image:after {
-  content: url(../images/logo/logo-dark-20x20.png);
+  content: url(../images/logo/logo2.png);
   position: absolute;
   bottom: 10px;
   right: 15px;
@@ -1465,6 +1483,19 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
+
+.background-shakenstirred {
+  background-image: url("../images/shaken-and-stirred.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+.background-upallnight {
+  background-image: url("../images/up-all-night.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
 
 .background-vertical-1 {
   background-image: url("../images/600x900.gif");
