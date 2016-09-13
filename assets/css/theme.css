@@ -1100,7 +1100,7 @@ cite img {
   cursor: default; }
 
 .single-item-image:after {
-  content: url(../images/logo/logo2.png);
+  /*content: url(../images/logo/logo2.png);*/
   position: absolute;
   bottom: 10px;
   right: 15px;
@@ -1485,13 +1485,20 @@ img {
   background-position: center center; }
 
 .background-shakenstirred {
-  background-image: url("../images/shaken-and-stirred.jpg");
+  background-image: url("../images/cocktails/shaken-and-stirred.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
 
 .background-upallnight {
-  background-image: url("../images/up-all-night.JPG");
+  background-image: url("../images/cocktails/up-all-night.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.background-fullmonty {
+  background-image: url("../images/cocktails/fullmonty.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
