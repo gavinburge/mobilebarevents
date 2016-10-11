@@ -1,5 +1,6 @@
 <?php
 /**
+* mail to bookings.mbe@gmail.com
  * PHPMailer - PHP email creation and transport class.
  * PHP Version 5
  * @package PHPMailer

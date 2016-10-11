@@ -27,26 +27,26 @@
 							<small class="subheading">
 								Anytime , Anyday
 							</small>
-								REACH US 
+								DONT BE SHY
 						</h1>
 						<span class="divider-2"></span>
 					</header>
 					<div class="col-md-12 text-center">
-						<p class="text-semi-white big lead padding-bottom">For every question, complaint or even a single hello, don't hesitate to reach to us</p>
+						<p class="text-semi-white big lead padding-bottom">Get in touch today for MBE to mix up a great night for you</p>
 						<div class="col-md-4 text-center icon-block">
 							<i class="icon ion-location text-dark"></i>
 							<h3 class="icon-block-title">Location</h3>
-							<p>8th Avenue<br> New York City</p>
+							<p>Newport<br> South Wales</p>
 						</div>
 						<div class="col-md-4 text-center icon-block">
 							<i class="icon ion-clock text-dark"></i>
 							<h3 class="icon-block-title">Opening</h3>
-							<p>Friday - Saturday - Sunday <br> 8 P.M</p>
+							<p>Aim to respond as soon as we can </p>
 						</div>
 						<div class="col-md-4 text-center icon-block">
 							<i class="icon ion-icecream text-dark"></i>
 							<h3 class="icon-block-title">Setup your event</h3>
-							<p>Pick a day and organise your event<br> Reach us for more info</p>
+							<p>Give us as much info as you can</p>
 						</div>
 					</div>
 					<div class="col-md-8 col-md-offset-2 margin-top">
@@ -58,6 +58,28 @@
 							<div class="col-md-12 form-input-icon">
 								<i class="icon ion-at"></i>
 								<input id="email" name="email" type="email" placeholder="E-mail" required>
+							</div>
+                            <div class="col-md-12 form-input-icon">
+								<i class="icon ion-at"></i>
+                                <select id="package" name="package" type="text" required>
+                                <option value="">Click to choose a package</option>
+                                  <option value="ShakenAndStirred">Shaken and Stirred</option>
+                                  <option value="UppAllNight">Up All Night</option>
+                                  <option value="TheFullMonty">The Full Monty</option>
+                                  <option value="HouseParty">House Party</option>
+                                </select>
+							</div>
+                            <div class="col-md-12 form-input-icon">
+								<i class="icon ion-at"></i>
+								<input id="numberOfGuests" name="numberOfGuests" type="text" placeholder="Number of guests" required>
+							</div>
+                            <div class="col-md-12 form-input-icon">
+								<i class="icon ion-at"></i>
+								<input id="venuePostcode" name="venuePostcode" type="text" placeholder="Venue postcode" required>
+							</div>
+                            <div class="col-md-12 form-input-icon datetimepicker1">
+								<i class="icon ion-at"></i>
+								<input id="dateOfParty" name="dateOfParty" type="text" placeholder="Date of Party" required>
 							</div>
 							<div class="col-md-12 form-textarea-icon">
 								<i class="icon ion-edit"></i>
@@ -84,10 +106,19 @@
 				loadHeader('Contact Us', 'anytime, for anything');
 				loadFooter();
 			})
+            
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
 		</script>
 		<script src="assets/js/contact.min.js"></script>		
 		<script src="assets/js/map.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
+        <script type="text/javascript" src="/path/to/jquery.js"></script>
+<script type="text/javascript" src="assets/js/moment.js"></script>
+<script type="text/javascript" src="assets/js/transition.js"></script>
+<script type="text/javascript" src="assets/js/collapse.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-datetimepicker.min.js"></script>
 	</body>
 </html>
