@@ -1490,6 +1490,13 @@ img {
   background-size: cover;
   background-position: center center; }
 
+.background-mobilebar {
+  background-image: url("../images/gallery/4.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+
 .background-upallnight {
   background-image: url("../images/cocktails/up-all-night.JPG");
   background-repeat: no-repeat;
@@ -7952,3 +7959,8 @@ Copyright (c) 2015 Daniel Eden
   margin-left: -5px;
   margin-right: -5px; }
 
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
