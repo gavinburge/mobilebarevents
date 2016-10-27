@@ -3,34 +3,40 @@ require 'phpmailer/phpmailer/PHPMailerAutoload.php';
 
 $mail = new PHPMailer;
 // Setting up PHPMailer
-$mail->IsSMTP();                                      // Set mailer to use SMTP
+//$mail->IsSMTP();                                      // Set mailer to use SMTP
 // Visit http://phpmailer.worxware.com/index.php?pg=tip_srvrs for more info on server settings
 // For GMail    => smtp.gmail.com
 //     Hotmail  => smtp.live.com
 //     Yahoo    => smtp.mail.yahoo.com
 //     Lycos    => smtp.mail.lycos.com
 //     AOL      => smtp.aol.com
-$mail->Host = 'smtp.gmail.com';                       // Specify main and backup server
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
+//$mail->Host = 'smtp.gmail.com';                       // Specify main and backup server
+//$mail->SMTPAuth = true;                               // Enable SMTP authentication
 //This is the email that you need to set so PHPMailer will send the email from 
-$mail->Username = 'some_email@email.com';             // SMTP username
-$mail->Password = 'secret';                           // SMTP password
-$mail->SMTPSecure = 'tls';
-$mail->Port = 587;                                    // TCP port to connect to
+//$mail->Username = 'mail@gavinburge.com';             // SMTP username
+//$mail->Password = 'bill1610';                           // SMTP password
+//$mail->SMTPSecure = 'tls';
+//$mail->Port = 587;                  
+
+// TCP port to connect to
 // Add the address to send the mail to
-$mail->AddAddress('receiver@mail.com');
+$mail->AddAddress('bookings.mbe@gmail.com');
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 $mail->IsHTML(true);                                  // Set email format to HTML
 
 // add your company name here
-$company_name = 'your_company';
+$company_name = 'Mobile Bar Events';
 
 // choose which fields you would like to be validated separated by |
 // options required - check input has content valid_email - check for valid email
 $field_rules = array(
     'name' => 'required',
     'email'   => 'required|valid_email',
-    'message' => 'required'
+    'message' => 'required',
+    'package' => 'required',
+    'numberOfGuests' => 'required',
+    'venuePostcode' => 'required',
+    'dateOfParty' => 'required'
 );
 
 // change your error messages here
@@ -89,12 +95,26 @@ if (!empty($fields)) {
     if (empty($returnVal->messages)) {                         // Enable encryption, 'ssl' also accepted
         $email = stripslashes(safe($fields['email']));
         $body = stripslashes(safe($fields['message']));
+        
+        $name = stripslashes(safe($fields['name']));
+        $package = stripslashes(safe($fields['package']));
+        $numberOfGuests = stripslashes(safe($fields['numberOfGuests']));
+        $venuePostcode = stripslashes(safe($fields['venuePostcode']));
+        $dateOfParty = stripslashes(safe($fields['dateOfParty']));
+        
         // The sender of the form/mail
-        $mail->From = $email;
-        $mail->FromName = stripslashes(safe($fields['name']));
+        $mail->From = 'bookings@mobilebarevents.co.uk';
+        $mail->FromName = $name;
         $mail->Subject = '[' . $company_name . ']';
-        $content = $email . " sent you a message from your contact form:<br><br>";
-        $content .= "-------<br>" . $body . "<br><br><br><br>Email: " . $email;      
+        
+        $content = $name . " sent you a message from your contact form:<br><br>";
+        $content .= "-------<br>" . $body . "<br><br><br>";
+        $content .= "<br>Email: " . $email . "<br>";
+        $content .= "<br>Package: " . $package . "<br>";
+        $content .= "<br>Number Of Guests: " . $numberOfGuests  . "<br>";
+        $content .= "<br>Venue Postcode: " . $venuePostcode . "<br>";
+        $content .= "<br>Date of Party: " . $dateOfParty;
+        
         $mail->Body = $content;
 
         if(@$mail->Send()) {

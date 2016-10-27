@@ -79,12 +79,15 @@
 							</div>
                             <div class="col-md-12 form-input-icon datetimepicker1">
 								<i class="icon ion-at"></i>
-								<input id="dateOfParty" name="dateOfParty" type="text" placeholder="Date of Party" required>
+								<input id="dateOfParty" data-provide="datepicker" name="dateOfParty" type="text" placeholder="Date of Party" required>
 							</div>
 							<div class="col-md-12 form-textarea-icon">
 								<i class="icon ion-edit"></i>
 								<textarea id="message" name="message" placeholder="Your Message" required></textarea>
 							</div>
+                            
+                            
+                            
 							<div class="col-md-12">
 								<p class="text-semi-white tiny required-message">
 									* All fields required.
@@ -108,17 +111,9 @@
 			})
             
             $(function () {
-                $('#datetimepicker1').datetimepicker();
+                $('.datepicker').datepicker();
             });
 		</script>
 		<script src="assets/js/contact.min.js"></script>		
-		<script src="assets/js/map.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-        <script type="text/javascript" src="/path/to/jquery.js"></script>
-<script type="text/javascript" src="assets/js/moment.js"></script>
-<script type="text/javascript" src="assets/js/transition.js"></script>
-<script type="text/javascript" src="assets/js/collapse.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap-datetimepicker.min.js"></script>
 	</body>
 </html>
