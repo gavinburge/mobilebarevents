@@ -1,2 +1,0 @@
-# mobilebarevents
-Mobile Bar Events
